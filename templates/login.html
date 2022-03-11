@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
 </head>
   <style>
     body {
@@ -12,7 +12,9 @@
       margin: 50px 300px 50px 300px;
       justify-content: left;
     }
-
+    .error{
+        margin: 50px 300px 50px 300px;
+    }
   </style>
   <body>
   <form action="" method="post">
@@ -36,12 +38,12 @@
     </div>
 
     <div>
-      <input class="btn btn-default" type="submit" value="Login" />
-        <p> Not a user? <a href="signUp">Sign up</a></p>
+      <input class="btn" type="submit" value="Login" />
+
     </div>
   </form>
   {% if error %}
-      <p class="error"><strong>Error:</strong> {{ error }} {% endif %}  </p>
+      <p class="error" style="text-align:center"><strong>Error:</strong> {{ error }} {% endif %}  </p>
   </body>
 
 </html>
