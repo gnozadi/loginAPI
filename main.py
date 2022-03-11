@@ -42,6 +42,8 @@ def login():
                 session["lastLogin"] = now
                 t = session["timeBetween"] / 3600
                 redirect(url_for("login"))
+            elif userID in lists and lists[userID] == userPass:
+                return "Logged in"
             if session["attempts"] > 5 and t < 1:
                 session["limitReached"] = True
 
